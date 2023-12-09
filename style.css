@@ -1,8 +1,34 @@
-body {
-    background-color: dimgrey;
+.hover-container {
+    position: relative;
+    display: inline-block;
 }
 
-.atas {
+.hover-image {
+    width: 300px;
+    height: 200px;
+}
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3 ease;
+}
+
+.hover-container:hover .hover-overlay {
+    opacity: 1;
+}
+
+.hover-teks {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50,-50);
+    color: white;
+    font-size: 20px;
     text-align: center;
-    color: red;
 }
